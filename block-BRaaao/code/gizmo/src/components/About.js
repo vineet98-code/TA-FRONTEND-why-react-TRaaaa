@@ -2,7 +2,7 @@ import React from 'react'
 
 export const About = () => {
     return (
-        <div>
+        <div className= "text-center my-3">
             This is About section
         </div>
     )

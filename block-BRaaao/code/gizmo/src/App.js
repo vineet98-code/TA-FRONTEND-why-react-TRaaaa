@@ -2,14 +2,11 @@ import Header from './components/Header';
 import {Hero} from './components/Hero';
 import {Articles} from './components/Articles';
 import {Footer} from './components/Footer';
-import {Home} from './components/Home';
 import {About} from './components/About';
-import {Contact} from './components/Contact';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 function App() {
@@ -119,17 +116,16 @@ function App() {
     <Router>
       <Header />
       <Switch>
-          <Route exact path="/home">
-            <Home />
+          <Route exact path="/" render= {()=> {
+            return <Articles articles={articles} />
+            
+          }}>
           </Route>
           <Route exact path="/about">
             <About />
           </Route>
-          <Route exact path="/contact">
-            <Contact />
-          </Route>
+          
           <Hero />
-          <Articles articles={articles}/>
         </Switch>
       <Footer />
     </Router>
