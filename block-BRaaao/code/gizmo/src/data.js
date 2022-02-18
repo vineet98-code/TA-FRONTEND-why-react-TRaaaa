@@ -99,3 +99,5 @@ let allArticles =  [
         'The crypto industry is relatively new. Because of that, people need time to adapt to it. You will find people that are skeptical about this subject. They believe that cryptocurrencies will never replace fiat money. More precisely, you will hear them saying th… [+6128 chars]',
     },
   ];
+
+export default allArticles

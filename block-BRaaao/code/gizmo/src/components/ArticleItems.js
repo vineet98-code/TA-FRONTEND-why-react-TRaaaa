@@ -1,10 +1,16 @@
 import React from 'react'
 
-export const ArticleItems = ({article}) => {
+const ArticleItems = (props) => {
     return (
-        <div>
-            <h1>{article.title}</h1>
-            <p>{article.content}</p>
+        <div className="card ">
+            <img src={props.urlToImage} className="card-img-top" alt={props.title} />
+                <div className="card-body">
+                    <h5 className="card-title">{props.title}</h5>
+                    <p className="card-text">{props.description}</p>
+                    <a href={props.url} className="btn btn-primary">Visit Website</a>
+                </div>
         </div>
     )
 }
+
+export default ArticleItems
