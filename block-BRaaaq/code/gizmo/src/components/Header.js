@@ -1,26 +1,14 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { Link } from 'react-router-dom'
 
-export default function Header() {
-    return (
-        <ul class="nav nav-pills nav-fill">
-            <li class="nav-item">
-                <Link class="nav-link active" aria-current="page" to="/">Home</Link>
-            </li>
-            <li class="nav-item">
-                <Link class="nav-link " to="/about">About</Link>
-            </li>
-            <li class="nav-item">
-                <Link class="nav-link" to="/hero">Hero</Link>
-            </li>
-            <li class="nav-item">
-                <Link class="nav-link ">Contacts</Link>
-            </li>
-        </ul>
-    )
+const Header = () => {
+  return (
+    <nav className="nav nav-pills nav-fill">
+      <a className="nav-link " aria-current="page" href="/">Home</a>
+      <a className="nav-link" href="/">About</a>
+      <a className="nav-link" href="/">Contact</a>
+      
+    </nav>
+  )
 }
-// type passing as a string will throw an error, when we pass a number it will be converted to a string
-Header.propTypes = {
-    title: PropTypes.string
-}
+
+export default Header

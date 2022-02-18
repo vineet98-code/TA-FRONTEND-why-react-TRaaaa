@@ -1,17 +1,21 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import PropTypes from 'prop-types'
 
-export const ArticleItems = ({ article }) => {
+const ArticleItems = (props) => {
     return (
-        <div className="card">
-            <img src={article.urlToImage} className="card-img-top" alt="..." />
-            <div className="card-body">
-              <h5 className="card-title">{article.title}</h5>
-              <p className="card-text">{article.description}</p>
-              <p className="card-text">{article.publishedAt}</p>
-              <Link to="#" className="btn btn-primary">Read more</Link>
-            </div>
+        <div className="card ">
+            <img src={props.urlToImage} className="card-img-top" alt={props.title} />
+                <div className="card-body">
+                    <h5 className="card-title">{props.title}</h5>
+                    <p className="card-text">{props.description}</p>
+                    <a href={props.url} className="btn btn-primary">Visit Website</a>
+                </div>
         </div>
     )
 }
 
+export default ArticleItems
+
+ArticleItems.propTypes = {
+    author: PropTypes.string
+}
