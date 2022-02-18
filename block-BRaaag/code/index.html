@@ -19,6 +19,7 @@
 
       <ul class="movies_List"></ul>
     </div>
+    <!-- cdn script for react -->
     <script
       crossorigin
       src="https://unpkg.com/react@17/umd/react.development.js"
@@ -27,7 +28,9 @@
       crossorigin
       src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
     ></script>
+    <!-- script fpr converting jsx into javascript -->
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!--  -->
     <script type="text/babel">
       let input = document.querySelector(`input[type = "text"]`);
       let rootElm = document.querySelector('.movies_List');
@@ -63,7 +66,7 @@
         let todoUI = allMovies.map((movie, i) => {
           return (
             <li key={movie.name}>
-              <label>{movie.name}</label>
+              <label htmlFor={i}>{movie.name}</label>
               <button id={i} onClick={handleChange}>
                 {movie.watched ? 'Watched' : 'To Watch'}
               </button>
